@@ -1,23 +1,45 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.model.library'
 
-android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
-
-    defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 19
-        versionCode 2480
-        versionName "2.4.8"
+buildscript {
+    repositories {
+        mavenCentral()
     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle-experimental:0.2.0'
+    }
+}
 
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
+model {
+    android {
+        compileSdkVersion = 22
+        buildToolsVersion = "23.0.0"
+
+        defaultConfig.with {
+            minSdkVersion.apiLevel = 8
+            targetSdkVersion.apiLevel = 19
+            versionCode = 2480
+            versionName = "2.4.8"
+        }
+
+        /*sourceSets.with {
+            java.
+            /*manifest.srcFile = 'AndroidManifest.xml'
             java.srcDirs = ['src']
             resources.srcDirs = ['src']
             res.srcDirs = ['res']
             aidl.srcDirs = ['src']
-        }
+        }*/
+
+        /*source {
+            main {
+                manifest.srcFile = 'opencv/src/AndroidManifest.xml'
+                java.source.srcDirs += 'src'
+                res.source.srcDirs += 'res'
+                aidl.source.srcDirs += 'aidl'
+            }
+        }*/
     }
+
+
 }
+
