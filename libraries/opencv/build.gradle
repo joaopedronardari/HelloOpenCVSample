@@ -29,17 +29,27 @@ model {
             res.srcDirs = ['res']
             aidl.srcDirs = ['src']
         }*/
-
-        /*source {
-            main {
-                manifest.srcFile = 'opencv/src/AndroidManifest.xml'
-                java.source.srcDirs += 'src'
-                res.source.srcDirs += 'res'
-                aidl.source.srcDirs += 'aidl'
-            }
-        }*/
     }
 
-
+    // Configures source set directory.
+    android.sources {
+        main {
+            java {
+                source {
+                    srcDir 'src'
+                }
+            }
+            res {
+                source {
+                    srcDir 'res'
+                }
+            }
+            aidl {
+                source {
+                    srcDir 'src'
+                }
+            }
+        }
+    }
 }
 
