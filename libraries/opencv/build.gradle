@@ -20,15 +20,6 @@ model {
             versionCode = 2480
             versionName = "2.4.8"
         }
-
-        /*sourceSets.with {
-            java.
-            /*manifest.srcFile = 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            res.srcDirs = ['res']
-            aidl.srcDirs = ['src']
-        }*/
     }
 
     // Configures source set directory.
